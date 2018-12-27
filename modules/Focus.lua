@@ -106,8 +106,9 @@ function Focus:OnEnable()
 end
 
 function Focus:OnDisable()
-	self.Bar:UnregisterEvents()
 	self.Bar:Hide()
+	self.Bar:Lock()
+	self.Bar:UnregisterEvents()
 end
 
 function Focus:PreShowCondition(bar, unit)

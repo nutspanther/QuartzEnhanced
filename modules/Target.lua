@@ -84,8 +84,9 @@ function Target:OnEnable()
 end
 
 function Target:OnDisable()
-	self.Bar:UnregisterEvents()
 	self.Bar:Hide()
+	self.Bar:Lock()
+	self.Bar:UnregisterEvents()
 end
 
 function Target:PreShowCondition(bar, unit)

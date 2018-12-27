@@ -98,8 +98,9 @@ function Player:OnEnable()
 end
 
 function Player:OnDisable()
-	self.Bar:UnregisterEvents()
 	self.Bar:Hide()
+	self.Bar:Lock()
+	self.Bar:UnregisterEvents()
 end
 
 function Player:ApplySettings()

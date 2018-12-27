@@ -81,8 +81,9 @@ function Pet:OnEnable()
 end
 
 function Pet:OnDisable()
-	self.Bar:UnregisterEvents()
 	self.Bar:Hide()
+	self.Bar:Lock()
+	self.Bar:UnregisterEvents()
 end
 
 function Pet:ApplySettings()
