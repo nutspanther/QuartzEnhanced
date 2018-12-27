@@ -546,6 +546,7 @@ do
 		self.Hide = nothing
 		self.Icon:SetTexture("Interface\\Icons\\Temp")
 		self.Text:SetText(self.unit)
+		self.locked = false
 	end
 
 	function CastBarTemplate:Lock()

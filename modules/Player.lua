@@ -93,7 +93,9 @@ end
 function Player:OnEnable()
 	self.Bar:RegisterEvents()
 	self:ApplySettings()
-
+	if self.Bar.locked == false then
+		self.Bar:Unlock()
+	end
 	self:UpdateChannelingTicks()
 end
 

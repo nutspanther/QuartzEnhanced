@@ -78,6 +78,9 @@ end
 function Pet:OnEnable()
 	self.Bar:RegisterEvents()
 	self:ApplySettings()
+		if self.Bar.locked == false then
+		self.Bar:Unlock()
+	end
 end
 
 function Pet:OnDisable()

@@ -81,6 +81,9 @@ function Target:OnEnable()
 	self.Bar.PLAYER_TARGET_CHANGED = self.Bar.UpdateUnit
 	self.lastNotInterruptible = false
 	self:ApplySettings()
+	if self.Bar.locked == false then
+		self.Bar:Unlock()
+	end
 end
 
 function Target:OnDisable()
